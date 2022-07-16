@@ -15,3 +15,10 @@
     transform: translateX(0px);
 }
 
+@media (min-width: 576px) {
+    .swiperImage {
+        width: 300px;
+        height: 300px;
+    }
+}
+

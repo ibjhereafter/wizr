@@ -6,6 +6,7 @@ import useGetSwiperContext from './hooks/useGetSwiperContext';
 import useSwipe from './hooks/useSwipe';
 
 import handleTouchStart from '../utilites/functions/handleTouchStart';
+import Image from 'next/image';
 
 const SwiperList = () => {
     const imageData = useSelector((state) => state?.swiperImages);
@@ -24,16 +25,21 @@ const SwiperList = () => {
         length: images.length
     }
 
+    const loaderProp =({ src }) => {
+        return src;
+    }
+
     const slides = images.map((image, index) => {
         return (
             <Fragment key={image.id}>
                 <section className={index === context.currentSlide ? styles.activeSlide : styles.slide}>
                     {
                         index === context.currentSlide ?
-                            (<img
+                            (<Image
                                 onTouchStart={(event) => handleTouchStart(event, setTouchPosition)}
                                 onTouchMove={(event) => handleTouchMove({...touchMoveDataObject, event})}
                                 className={styles.swiperImage} src={image.url} alt={image.title}
+                                width={600} height={600} loader={loaderProp}
                             />)
 
                             : null
