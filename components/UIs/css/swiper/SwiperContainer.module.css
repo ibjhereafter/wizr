@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiperContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.swiperListWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nextButton {
+    position: absolute;
+    top: 450px;
+    right: 480px;
+    cursor: pointer;
+    display: none;
+}
+
+.previousButton {
+    position: absolute;
+    top: 450px;
+    left: 480px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .nextButton {
+        display: block;
+    }
+
+    .previousButton  {
+        display: block;
+    }
+}
+
+
+
+
+
+

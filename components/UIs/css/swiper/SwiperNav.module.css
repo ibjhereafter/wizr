@@ -1,0 +1,54 @@
+.navContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+}
+
+.navWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 28px;
+}
+
+.navImageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    cursor: pointer;
+    transition: 1000ms ease-in;
+
+}
+
+.navImageWrapper:hover {
+    background-color: #ec7600;
+}
+
+.navItemsWrapper {
+    display: flex;
+}
+
+.navTitle {
+    margin-bottom: 15px;
+}
+
+.activeMenu {
+    background-color: #ec7600;
+}
+
+@media (min-width: 992px) {
+   .navContainer {
+       overflow-y: hidden;
+
+   }
+}
+
+
+
+
